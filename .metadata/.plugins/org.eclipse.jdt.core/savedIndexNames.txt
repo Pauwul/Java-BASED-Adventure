@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+E:\Tema PIP\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3534751343.index
+64917367.index

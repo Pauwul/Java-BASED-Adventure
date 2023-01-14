@@ -1,0 +1,91 @@
+package FactoryH;
+
+public class Test {
+
+	public class Test {
+	    public static void main(String[] args) {
+	        
+	    }
+	    
+	    
+	    public StoryEvent eventFactory(String hero, String name) {
+	        StoryEvent storyEvent = null;
+	        if (hero.equals("Knight")) {
+	            storyEvent = new KnightEvent(name);
+	        } else if (hero.equals("Wizard")) {
+	            storyEvent = new WizardEvent(name);
+	        } else if (hero.equals("Ranger")) {
+	            storyEvent = new RangerEvent(name);
+	        } else {
+	            // TODO: Throw error
+	            System.out.println("Invalid hero");
+	        }
+	        return storyEvent;
+	    }
+	}
+
+	interface StoryEvent {
+
+	    void showMessage(int part);
+	    //void inputNextPrompt();
+	    void inputArtifact();
+	    
+	}
+
+	class KnightEvent implements StoryEvent {
+	    String name, artifact;
+	    
+	    KnightEvent(String name){
+	        this.name = name;
+	    }
+	    public void showMessage(int part){
+	       //TODO: switch case care va afisa mesajul corespunzator
+	    }
+	    public void inputNextPrompt(){
+	    }
+		@Override
+		public void inputArtifact() {
+			// TODO Auto-generated method stub
+			
+		}
+	    
+	}
+	class WizardEvent implements StoryEvent {
+		String name, artifact;
+		
+		WizardEvent(String name){
+	        this.name = name;
+	    }
+		
+
+		public void showMessage(int part) {
+			
+		}
+
+
+		@Override
+		public void inputArtifact() {
+			// TODO Auto-generated method stub
+			
+		}
+
+	}
+	class RangerEvent implements StoryEvent {
+		String name, artifact;
+		
+		RangerEvent(String name){
+	        this.name = name;
+
+	    }
+		public void showMessage(int part) {
+			// TODO Auto-generated method stub
+			
+		}
+		@Override
+		public void inputArtifact() {
+			// TODO Auto-generated method stub
+			
+		}
+
+	}
+}
